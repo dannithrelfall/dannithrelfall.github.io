@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Coca-Cola</title>
+   <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- JAVASCRIPT-->
+    <script src="JS/javascript.js"></script>
+	 <script src="JS/javascript2.js"></script>
+   <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="CSS/navigationstyle.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slider.css">
+   <!-- VIEWPORT-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  
+</head>
+<body>
+<h1>Coca-Cola</h1>
+   <!-- NAVIGATION -->
+	<ul class="topnav">
+	
+		<li><a class="active" href="Index.html">Home</a></li>
+		<li><a href="products.html">Products</a></li>
+		<li><a href="history.html">History</a></li>
+		<li ><a href="sustainability.html">Sustainabilty</a></li>
+		<li ><a href="christmas.html">Christmas</a></li>
+		<li ><a href="demo.html">Demo</a></li>
+		<li ><a href="report.html">Log</a></li>
+	</ul>
+
+     <!-- SLIDESHOW -->
+	<div class="slideshow-container">
+	<div class="mySlides fade">
+	  <div class="numbertext">1 / 3</div>
+	  <img src="Assets/cokeadvert1.jpg" alt="cokeadvert" style="width:100%">
+	  <div class="text">Taste the feeling!</div>
+	</div>
+
+	<div class="mySlides fade">
+	  <div class="numbertext">2 / 3</div>
+	  <img src="Assets/cokeadvert2.jpg" alt="cokeadvert2" style="width:100%">
+	  <div class="text">What to drink on your way to the top!</div>
+	</div>
+
+	<div class="mySlides fade">
+	  <div class="numbertext">3 / 3</div>
+	  <img src="Assets/cokeadvert3.jpg" alt="cokeadvert3" style="width:100%">
+	  <div class="text">Let life surprise you!</div>
+	</div>
+
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+	</div>
+	<br>
+
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span> 
+	  <span class="dot" onclick="currentSlide(2)"></span> 
+	  <span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+
+	<!-- had to be here otherwise would not work -->
+<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		  dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+</script>
+
+	<!-- HISTORY -->
+	<div class="background">
+	  <div class="transbox">
+		<h4><u> History </u></h4>
+		<p>It was 1886 and in New York Harbour, workers were constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was about to be unveiled. Like many people who change history, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity.</p>
+		<p>One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done, he carried it a few doors down to Jacobs’ Pharmacy. Here, the mixture was combined with carbonated water and sampled by customers who all agreed this new drink was something special. So Jacobs’ Pharmacy put it on sale for five cents (about 3p) a glass. Pemberton’s bookkeeper, Frank Robinson, named the mixture Coca-Cola and wrote it out in his distinctive script. </p>
+		<p>This is where the journey of Coca-Cola began, to find out more on the history of Coca-Cola click the 'History' button within the navigation.</p>
+	  </div>
+	</div>
+
+
+	<!-- SUSTAINABILITY-->
+	<div id="sustaincontainer">
+	<iframe id="sustainvid"  
+	src="https://www.youtube.com/embed/bCxlJvDDpvY">
+	</iframe>
+	<div class="boxed">
+	<p>The Coca-Cola Company has a longstanding commitment to reporting on our sustainability journey. We issue sustainability updates annually that encompass both our Company’s and the broader Coca-Cola system’s global operations</p>
+	</div>
+	</div>
+	<br>
+	<br>
+
+	<!-- Contact information + brand information -->
+	<div id="contact">
+	  <div id="socialmedia"> 
+	<a href="https://www.facebook.com/cocacolaGB/?brand_redir=40796308305" class="fa fa-facebook" title="Facebook">  </a>
+	<a href="https://twitter.com/CocaCola?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter" title="Twitter"></a>
+	<a href="https://www.youtube.com/channel/UCosXctaTYxN4YPIvI5Fpcrw" class="fa fa-youtube" title="YouTube"></a>
+	<a href="https://www.instagram.com/cocacola/?hl=en" class="fa fa-instagram" title="Instagram"></a>
+	<h3>Contact us...</h3>
+	</div>
+	<div id="ending">
+	The Coca-Cola Company (NYSE: KO) is the world’s largest beverage company, offering over 500 brands to people in more than 200 countries. Of our 21 billion-dollar brands, 19 are available in lower- or no-sugar options to help people moderate their consumption of added sugar. In addition to our namesake Coca-Cola drinks, some of our leading brands around the world include: AdeS soy-based beverages, Ayataka green tea, Dasani waters, Del Valle juices and nectars, Fanta, Georgia coffee, Gold Peak teas and coffees, Honest Tea, Minute Maid juices, Powerade sports drinks, Simply juices, smartwater, Sprite, vitaminwater, and Zico coconut water. At Coca-Cola, we’re serious about making positive contributions to the world. That starts with reducing sugar in our drinks and continuing to introduce new ones with added benefits. It also means continuously working to reduce our environmental impact, creating rewarding careers for our associates and bringing economic opportunity wherever we operate. Together with our bottling partners, we employ more than 700,000 people around the world.
+	</div> 
+	</div>
+
+	<!-- To the top button -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+		
+</body>
+</html>

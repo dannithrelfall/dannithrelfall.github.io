@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Coca-Cola</title>
+ <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- JAVASCRIPT-->
+    <script src="JS/canvas.js"></script> 
+    <script src="JS/javascript.js"></script>
+	<script src="JS/java.js"></script>
+   <!-- STYLESHEETS -->
+     	<link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+	 <link rel="stylesheet" type="text/css" href="CSS/navigationstyle.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" /> 
+
+     <!-- VIEWPORT-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+
+  
+</head>
+
+<body>
+<br>
+<h1>Coca-Cola</h1>
+<br>
+   <!-- NAVIGATION -->
+	<ul class="topnav">
+		<li><a  href="Index.html">Home</a></li>
+		<li><a  href="products.html">Products</a></li>
+		<li><a href="history.html">History</a></li>
+		<li ><a href="sustainability.html">Sustainabilty</a></li>
+		<li ><a class="active" href="christmas.html">Christmas</a></li>
+		<li ><a href="demo.html">Demo</a></li>
+		<li ><a href="report.html">Log</a></li>
+	</ul>
+<br>
+<h1>Create your own Christmas scene!</h1>
+<hr>
+
+	<!-- Wrapper Begins -->
+	<div id="wrapper">
+	
+        <!-- Color Table (controlled in JavaScript) -->
+        <div id="colorTable"></div>
+        
+        <!-- Toggle Color Button -->
+        <div id="color" title="Toggle Color">
+            <img src="Assets/color-arrow.png" alt="Toggle Color" width="16" height="16" />
+        </div>
+        
+        <!-- Clear Canvas Button -->
+        <div id="nuke" title="Clear Canvas">
+          <a href="javascript:location.reload(true)">
+            <img src="Assets/burn.png" alt="Clear Canvas" width="16" height="16" />
+          </a>
+        </div>
+        
+        <!-- Save Image -->
+        <div id="saveWrapper">
+            <div id="save">
+              <img src="Assets/save.png" alt="Save Image" width="16" height="16" id="convertpngbtn" title="Save Image" />
+            </div>
+        
+            <div id="textdownload">
+              Right click the image to download.
+              <img src="Assets/cross.png" alt="Cancel" width="16" height="16" id="resetbtn" title="Continue Drawing" />
+            </div>
+        </div>
+        
+        <!-- Blackboard Starts -->
+        <div id="blackboardPlaceholder">
+          <p><!-- Tool Selector -->
+            <select name="selector" id="selector">
+              <option value="chalk">Chalk</option>
+              <option value="line">Line</option>
+              <option value="rect">Rectangle</option>
+            </select>
+          </p>
+        
+        <!-- Canvas Begins -->
+        <canvas id="drawingCanvas" height="532" width="897"> 
+          <p class="noscript">We're sorry, this web application is currently not supported with your browser. Please use an alternate browser or download a supported <br />browser. Supported browsers: <a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.opera.com">Opera</a>, <a href="http://www.mozilla.com">Firefox</a>, <a href="http://www.apple.com/safari">Safari</a>, <br />and <a href="http://www.konqueror.org">Konqueror</a>. Also make sure your JavaScript is enabled.</p>
+        </canvas> 
+        <!-- Canvas Ends -->
+            
+            <!-- Chalk Pieces -->
+            <div id="whiteChalk_button">
+              <img src="Assets/white.png" alt="colorchalk1" width="71" height="17" onclick="context.strokeStyle = '#FFFFFF';" />
+            </div>    
+            
+            <div id="redChalk_button">
+              <img src="Assets/red.png" alt="colorchalk2" width="71" height="17" onclick="context.strokeStyle = '#F00000';" />
+            </div>
+            
+            <div id="orangeChalk_button">
+              <img src="Assets/orange.png" alt="colorchalk3" width="71" height="17" onclick="context.strokeStyle = '#ff9600';" />
+            </div>
+            
+            <div id="yellowChalk_button">
+              <img src="Assets/yellow.png" alt="colorchalk4" width="71" height="17" onclick="context.strokeStyle = '#fff600';" />
+            </div>
+            
+            <div id="greenChalk_button">
+              <img src="Assets/green.png" alt="colorchalk5" width="71" height="17" onclick="context.strokeStyle = '#48ff00';" />
+            </div>
+            
+            <div id="blueChalk_button">
+              <img src="Assets/blue.png" alt="colorchalk6" width="71" height="17" onclick="context.strokeStyle = '#001eff';" />
+            </div>
+            
+            <div id="pinkChalk_button">
+              <img src="Assets/pink.png" alt="colorchalk7" width="71" height="17" onclick="context.strokeStyle = '#ff00d2';" />
+            </div>
+        
+            <!-- Eraser -->
+            <div id="eraser" onclick="context.strokeStyle = '#424242'; context.lineWidth = '22';"></div>
+            
+          </div>
+          <!-- End of Placeholder -->
+          
+          <!-- Toggle Stroke Weight -->
+          <img src="Assets/toggle.png"  alt="toggle" width="16" height="16" id="stroke-subtract" title="Decrease Stroke" onclick="context.lineWidth--;" />
+          <img src="Assets/toggle-expand.png" alt="toggleexpand" width="16" height="16" id="stroke-add" title="Increase Stroke" onclick="context.lineWidth++;" />
+          
+		<!-- Stroke Weight Panel -->
+          <div id="strokeWeight">
+            <img src="Assets/stroke1.png" alt="1.0" class="stroke" width="30" height="32" onclick="context.lineWidth = '1.0';" />
+            <img src="Assets/stroke2.png" alt="6.0" class="stroke" width="30" height="32" onclick="context.lineWidth = '6.0';" />
+            <img src="Assets/stroke3.png" alt="9.0" class="stroke" width="30" height="32" onclick="context.lineWidth = '9.0';" />
+            <img src="Assets/stroke4.png" alt="13.0" class="stroke" width="30" height="32" onclick="context.lineWidth = '13.0';" />
+          </div>  
+	
+	</div>
+	<!-- End of Wrapper -->
+	
+  
+   <hr>
+	
+	<div id="quiz">
+Question 1: Does Santa Claus traditionally wear red because it’s the colour of Coca-Cola?  
+<input type="text" id="q1">
+<br/>
+Question 2: Which artist did Coca-Cola commission to create an image of Santa Claus? <br>
+  <input type="text" id = "q2" >
+   <br>
+Question 3: Which year did the Coca-Cola Christmas truck appear on TV? <br>
+  <input type="text" id = "q3" >
+  <br>
+  Question 4:Which furry animals have featured in Coca-Cola Christmas advertising? <br>
+  <input type="text" id ="q4" >
+  <br>
+  Question 5: The ‘Holidays Are Coming’ advert starts with a boy ringing what? <br>
+  <input type="text" id = "q5">
+
+<input type="button" id="submit" value="Submit!">
+<br>
+
+<button onclick="toggle()" id="displayText">Answers</button> 
+<div id="toggleText" style="display: none">
+<p>Question 1:</p>
+<p>True!</p>
+<br>
+<p>Question 2:</p>
+<p>Haddon Sundblom</p>
+<br>
+<p>Question 3:</p>
+<p>1995</p>
+<br>
+<p>Question 4:</p>
+<p>Polar bear</p>
+<br>
+<p>Question 5:</p>
+<p>Church bell</p>
+<br>
+</div>
+	
+</div>
+
+
+	<!-- Contact information + brand information -->
+	<div id="contact">
+	  <div id="socialmedia"> 
+	<a href="https://www.facebook.com/cocacolaGB/?brand_redir=40796308305" class="fa fa-facebook" title="Facebook">  </a>
+	<a href="https://twitter.com/CocaCola?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter" title="Twitter"></a>
+	<a href="https://www.youtube.com/channel/UCosXctaTYxN4YPIvI5Fpcrw" class="fa fa-youtube" title="YouTube"></a>
+	<a href="https://www.instagram.com/cocacola/?hl=en" class="fa fa-instagram" title="Instagram"></a>
+	<h3>Contact us...</h3>
+	</div>
+	<div id="ending">
+	The Coca-Cola Company (NYSE: KO) is the world’s largest beverage company, offering over 500 brands to people in more than 200 countries. Of our 21 billion-dollar brands, 19 are available in lower- or no-sugar options to help people moderate their consumption of added sugar. In addition to our namesake Coca-Cola drinks, some of our leading brands around the world include: AdeS soy-based beverages, Ayataka green tea, Dasani waters, Del Valle juices and nectars, Fanta, Georgia coffee, Gold Peak teas and coffees, Honest Tea, Minute Maid juices, Powerade sports drinks, Simply juices, smartwater, Sprite, vitaminwater, and Zico coconut water. At Coca-Cola, we’re serious about making positive contributions to the world. That starts with reducing sugar in our drinks and continuing to introduce new ones with added benefits. It also means continuously working to reduce our environmental impact, creating rewarding careers for our associates and bringing economic opportunity wherever we operate. Together with our bottling partners, we employ more than 700,000 people around the world.
+	</div> 
+	</div>
+
+	<!-- To the top button -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+		
+
+
+
+</body>
+</html>

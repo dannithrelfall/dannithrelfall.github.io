@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- JAVASCRIPT-->
+    <script src="JS/javascript.js"></script>
+   <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="CSS/navigationstyle.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slider.css">
+   <!-- VIEWPORT-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+   <!-- NAVIGATION -->
+	<ul class="topnav">
+	<h1>Coca-Cola</h1>
+		<li><a class="active" href="Index.html">Home</a></li>
+		<li><a href="products.html">Products</a></li>
+		<li><a href="history.html">History</a></li>
+		<li ><a href="sustainability.html">Sustainabilty</a></li>
+		<li ><a href="christmas.html">Christmas</a></li>
+		<li ><a href="demo.html">Demo</a></li>
+		<li ><a href="report.html">Log</a></li>
+	</ul>
+	
+	
+	<div id="sustaincontainer">
+	<iframe id="sustainvid" 
+		src="https://www.youtube.com/embed/TMCZ9ox5GyI">
+	</iframe>
+	<div class="boxed">
+	<p> My demo.</p>
+	</div>
+	</div>
+	
+	
+	
+	<!-- Contact information + brand information -->
+	<div id="contact">
+	  <div id="socialmedia"> 
+	<a href="https://www.facebook.com/cocacolaGB/?brand_redir=40796308305" class="fa fa-facebook" title="Facebook">  </a>
+	<a href="https://twitter.com/CocaCola?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter" title="Twitter"></a>
+	<a href="https://www.youtube.com/channel/UCosXctaTYxN4YPIvI5Fpcrw" class="fa fa-youtube" title="YouTube"></a>
+	<a href="https://www.instagram.com/cocacola/?hl=en" class="fa fa-instagram" title="Instagram"></a>
+	<h3>Contact us...</h3>
+	</div>
+	<div id="ending">
+	The Coca-Cola Company (NYSE: KO) is the world’s largest beverage company, offering over 500 brands to people in more than 200 countries. Of our 21 billion-dollar brands, 19 are available in lower- or no-sugar options to help people moderate their consumption of added sugar. In addition to our namesake Coca-Cola drinks, some of our leading brands around the world include: AdeS soy-based beverages, Ayataka green tea, Dasani waters, Del Valle juices and nectars, Fanta, Georgia coffee, Gold Peak teas and coffees, Honest Tea, Minute Maid juices, Powerade sports drinks, Simply juices, smartwater, Sprite, vitaminwater, and Zico coconut water. At Coca-Cola, we’re serious about making positive contributions to the world. That starts with reducing sugar in our drinks and continuing to introduce new ones with added benefits. It also means continuously working to reduce our environmental impact, creating rewarding careers for our associates and bringing economic opportunity wherever we operate. Together with our bottling partners, we employ more than 700,000 people around the world.
+	</div> 
+	</div>
+
+	<!-- To the top button -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+		<script>
+		
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+		</script>
+</body>
+</html>

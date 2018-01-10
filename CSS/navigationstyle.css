@@ -1,0 +1,37 @@
+body {
+	margin:0;
+background: linear-gradient(black, red)}
+
+
+ul.topnav {
+  list-style-type: none;
+    margin: 0;
+    padding: 2%;
+    overflow: hidden;
+    background-color: #000000;
+    position: relative;
+    top: 0;
+}
+
+ul.topnav li {float: right;}
+
+ul.topnav li a {
+display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	font-family: Sans-serif;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #8B0000;}
+
+ul.topnav li a.active {background-color: #8B0000;}
+
+
+
+  @media screen and (max-width: 600px){
+
+    ul.topnav li {float: none;}
+	container{float: none;}
+}
